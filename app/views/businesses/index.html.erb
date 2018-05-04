@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Businesses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Seller</th>
+      <th>Business name</th>
+      <th>Industry</th>
+      <th>Location</th>
+      <th>Price</th>
+      <th>Size</th>
+      <th>Inclusions</th>
+      <th>Business info</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @businesses.each do |business| %>
+      <tr>
+        <td><%= business.seller %></td>
+        <td><%= business.business_name %></td>
+        <td><%= business.industry %></td>
+        <td><%= business.location %></td>
+        <td><%= business.price %></td>
+        <td><%= business.size %></td>
+        <td><%= business.inclusions %></td>
+        <td><%= business.business_info %></td>
+        <td><%= link_to 'Show', business %></td>
+        <td><%= link_to 'Edit', edit_business_path(business) %></td>
+        <td><%= link_to 'Destroy', business, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Business', new_business_path %>
