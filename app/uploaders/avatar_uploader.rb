@@ -25,7 +25,7 @@ def content_type_whitelist
   /image\//
 end
   # class MyUploader < CarrierWave::Uploader::Base
-    storage :file
+    storage :fog
   # end
 
   # Override the directory where uploaded files will be stored.

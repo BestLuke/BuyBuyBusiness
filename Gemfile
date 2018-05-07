@@ -9,11 +9,13 @@ gem 'devise'
 
 gem 'carrierwave'
 
-gem 'fog'
+gem "fog-aws"
 
 gem 'mini_magick'
 
 gem 'file_validators'
+
+gem 'figaro'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
