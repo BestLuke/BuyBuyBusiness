@@ -21,6 +21,11 @@
     <%= form.text_field :business_name %>
   </div>
 
+   <div class="field">
+    <%= form.label :business_image %>
+    <%= form.file_field :business_image %>
+  </div>
+
   <div class="field">
     <%= form.label :industry %>
     <%= form.text_field :industry %>
@@ -54,4 +59,5 @@
   <div class="actions">
     <%= form.submit %>
   </div>
+  <%= render 'shared/errors', object: post %>
 <% end %>

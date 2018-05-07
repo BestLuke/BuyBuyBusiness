@@ -11,6 +11,12 @@
 </p>
 
 <p>
+<strong>Business image:</strong>
+<%#= image_tag(@business.business_image.url, alt: 'Image') if @business.business_image? %>
+<%= link_to(image_tag(@business.business_image.thumb.url, alt: 'Image'), @business.business_image.url, target: '_blank') if @business.business_image? %>
+</p>
+
+<p>
   <strong>Industry:</strong>
   <%= @business.industry %>
 </p>

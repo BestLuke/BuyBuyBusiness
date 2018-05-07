@@ -8,4 +8,6 @@ class Business < ApplicationRecord
     validates :size, presence: true
     validates :inclusions, presence: true
     validates :business_info, presence: true
+    # mount_uploader :avatar, AvatarUploader
+    mount_uploader :business_image, AvatarUploader
 end
