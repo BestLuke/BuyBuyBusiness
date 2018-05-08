@@ -1,37 +1,37 @@
+#app/controllers/businesses_controller.rb
+ 
 class BusinessesController < ApplicationController
-  before_action :set_business, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:index, :show]
-
-  
-
+  before_action :set_article, only: [:show, :edit, :update, :destroy]
+ 
   # GET /businesses
   # GET /businesses.json
   def index
     @businesses = Business.all
+    authorize @businesses
   end
-
-
-
-
+ 
   # GET /businesses/1
   # GET /businesses/1.json
   def show
   end
-
+ 
   # GET /businesses/new
   def new
     @business = Business.new
+    authorize @business
   end
-
+ 
   # GET /businesses/1/edit
   def edit
   end
-
+ 
   # POST /businesses
   # POST /businesses.json
   def create
     @business = Business.new(business_params)
     @business.user = current_user
+    authorize @business
+ 
     respond_to do |format|
       if @business.save
         format.html { redirect_to @business, notice: 'Business was successfully created.' }
@@ -42,7 +42,7 @@ class BusinessesController < ApplicationController
       end
     end
   end
-
+ 
   # PATCH/PUT /businesses/1
   # PATCH/PUT /businesses/1.json
   def update
@@ -56,7 +56,7 @@ class BusinessesController < ApplicationController
       end
     end
   end
-
+ 
   # DELETE /businesses/1
   # DELETE /businesses/1.json
   def destroy
@@ -66,13 +66,14 @@ class BusinessesController < ApplicationController
       format.json { head :no_content }
     end
   end
-
+ 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_business
+    def set_article
       @business = Business.find(params[:id])
+      authorize @business
     end
-
+ 
     # Never trust parameters from the scary internet, only allow the white list through.
     def business_params
       params.require(:business).permit(:seller, :business_name, :business_image, :industry, :location, :price, :size, :inclusions, :business_info, :user)
