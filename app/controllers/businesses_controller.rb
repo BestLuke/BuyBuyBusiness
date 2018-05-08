@@ -1,6 +1,4 @@
-#app/controllers/businesses_controller.rb
- 
-class BusinessesController < ApplicationController
+ class BusinessesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
  
   # GET /businesses
