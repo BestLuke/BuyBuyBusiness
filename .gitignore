@@ -23,3 +23,5 @@
 /config/master.key
 
 public/uploads
+
+/config/application.yml

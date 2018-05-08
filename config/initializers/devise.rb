@@ -4,6 +4,8 @@
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
 
+  # config.mailer_sender = 'm1mosizer@gmail.com'
+
   config.secret_key = 'f7c8d5519d72418832271c15784a987cbf2281dff798246cd63cf21a38003c8f723ff734289ab1ed957bbf8e70f0b2cf0d4b60ccfd4173813a3422844d7c67f9'
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
