@@ -2,18 +2,18 @@
 
 <h1>Businesses</h1>
 
-<table>
+<table class="pretty">
   <thead>
     <tr>
-      <th>Seller</th>
-      <th>Business name</th>
-      <th>Business Image</th>
-      <th>Industry</th>
-      <th>Location</th>
-      <th>Price</th>
-      <th>Size</th>
-      <th>Inclusions</th>
-      <th>Business info</th>
+      <th><%= sortable "seller"%></th>
+      <th><%= sortable "business_name", "Business name"%></th>
+      <th><%= sortable "business_image", "Business Image"%></th>
+      <th><%= sortable "industry"%></th>
+      <th><%= sortable "location"%></th>
+      <th><%= sortable "price"%></th>
+      <th><%= sortable "size"%></th>
+      <th><%= sortable "inclusions"%></th>
+      <th><%= sortable "business_info", "Business info"%></th>
       <th colspan="3"></th>
     </tr>
   </thead>

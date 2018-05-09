@@ -1,10 +1,10 @@
  class BusinessesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
- 
   # GET /businesses
   # GET /businesses.json
+  helper_method :sort_column, :sort_direction
   def index
-    @businesses = Business.all
+    @businesses = Business.order(sort_column + " " +  sort_direction)
     authorize @businesses
   end
  
@@ -32,6 +32,7 @@
  
     respond_to do |format|
       if @business.save
+        UserNotifierMailer.send_signup_email(current_user).deliver
         format.html { redirect_to @business, notice: 'Business was successfully created.' }
         format.json { render :show, status: :created, location: @business }
       else
@@ -75,5 +76,12 @@
     # Never trust parameters from the scary internet, only allow the white list through.
     def business_params
       params.require(:business).permit(:seller, :business_name, :business_image, :industry, :location, :price, :size, :inclusions, :business_info, :user)
+    end
+
+    def sort_column
+      Business.column_names.include?(params[:sort]) ? params[:sort] : "business_name"
+    end
+    def sort_direction
+      %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
     end
 end
