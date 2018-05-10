@@ -57,6 +57,12 @@ Create a better online store dedicated to the buying and selling of small to lar
 # <p style="text-align: center"> Website Idea
 	The website will be a 2 sided marketplace where people can buy and sell businesses of all sizes.
 
+## <p style="text-align: center"> User Stories
+Here are my user stories created to gauge the user experience
+![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+![Image of Yaktocat](https://raw.githubusercontent.com/biancapower/the_book_place/master/app/assets/images/logo_white.png)
+![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+
 ## <p style="text-align: center"> Detailed User Stories
 ### **User should be able to create a profile**
 **Feature:** Create Profile
