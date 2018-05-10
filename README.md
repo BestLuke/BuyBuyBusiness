@@ -1,13 +1,17 @@
 # <p style="text-align: center"> 2 Sided Marketplace 
 ### <p style="text-align: center"> By Luke Fraser 
-
+## links
+	Heroku	https://buy-buy-business.herokuapp.com/
+	GitHub	https://github.com/mrmimosizer/BuyBuyBusiness
+![Seller image](https://raw.githubusercontent.com/mrmimosizer/BuyBuyBusiness/master/app/assets/images/backimage.jpg)
 
 ## <p style="text-align: center"> Website Name ideation 
 1.	Buy Buy Business
 2.	Bye Bye Business
 3.	Buy Bye Business
 4.	Bye Buy Business
-	
+## <p style="text-align: center"> Website Logo
+![Image of Yaktocat](https://raw.githubusercontent.com/mrmimosizer/BuyBuyBusiness/master/app/assets/images/BBBLogo.png)
 ## <p style="text-align: center"> Website Problem for start 
 There is a need for a better online store dedicated to the buying and selling of small to large businesses within Australia.
 
@@ -57,11 +61,21 @@ Create a better online store dedicated to the buying and selling of small to lar
 # <p style="text-align: center"> Website Idea
 	The website will be a 2 sided marketplace where people can buy and sell businesses of all sizes.
 
+## <p style="text-align: center"> Wireframes
+![User stories 1](https://raw.githubusercontent.com/mrmimosizer/BuyBuyBusiness/master/app/assets/images/Screen%20Shot%202018-05-11%20at%209.01.48%20am.png)
+![User stories 1](https://raw.githubusercontent.com/mrmimosizer/BuyBuyBusiness/master/app/assets/images/Screen%20Shot%202018-05-11%20at%209.01.58%20am.png)
+![User stories 1](https://raw.githubusercontent.com/mrmimosizer/BuyBuyBusiness/master/app/assets/images/Screen%20Shot%202018-05-11%20at%209.02.13%20am.png)
+![User stories 1](https://raw.githubusercontent.com/mrmimosizer/BuyBuyBusiness/master/app/assets/images/Screen%20Shot%202018-05-11%20at%209.02.22%20am.png)
+
+## <p style="text-align: center"> Trello
+![User stories 1](https://raw.githubusercontent.com/mrmimosizer/BuyBuyBusiness/master/app/assets/images/Screen%20Shot%202018-05-11%20at%209.05.27%20am.png)
+## <p style="text-align: center"> ERD
+![User stories 1](https://raw.githubusercontent.com/mrmimosizer/BuyBuyBusiness/master/app/assets/images/Screen%20Shot%202018-05-11%20at%209.15.21%20am.png)
 ## <p style="text-align: center"> User Stories
 Here are my user stories created to gauge the user experience
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
-![Image of Yaktocat](https://raw.githubusercontent.com/biancapower/the_book_place/master/app/assets/images/logo_white.png)
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+![User stories 1](https://raw.githubusercontent.com/mrmimosizer/BuyBuyBusiness/master/app/assets/images/Screen%20Shot%202018-05-11%20at%208.59.33%20am.png)
+![User stories 2](https://raw.githubusercontent.com/mrmimosizer/BuyBuyBusiness/master/app/assets/images/Screen%20Shot%202018-05-11%20at%209.00.03%20am.png)![User stories 3](https://raw.githubusercontent.com/mrmimosizer/BuyBuyBusiness/master/app/assets/images/Screen%20Shot%202018-05-11%20at%209.00.19%20am.png)
+
 
 ## <p style="text-align: center"> Detailed User Stories
 ### **User should be able to create a profile**
@@ -230,10 +244,12 @@ Here are my user stories created to gauge the user experience
 
 2.	We need to incorporate a more competitive business model to be able to compete with competitors. Better website flow is a main goal in this as well as achieving good user experience.
 
+## <p style="text-align: center"> User Journey
+![Image of Yaktocat](https://raw.githubusercontent.com/mrmimosizer/BuyBuyBusiness/master/app/assets/images/Screen%20Shot%202018-05-11%20at%209.01.25%20am.png)
 ## <p style="text-align: center"> StyleSheet
 
-colour scheme:	https://coolors.co/cfdbd5-e8eddf-f5cb5c-242423-333533
-
+colour scheme:	
+![Image of Yaktocat](https://raw.githubusercontent.com/mrmimosizer/BuyBuyBusiness/master/app/assets/images/Screen%20Shot%202018-05-11%20at%209.01.09%20am.png)
 Title Font:		Alegreya (medium)
 
 Heading Font:		Alegreya (medium)
@@ -275,4 +291,32 @@ Logo Font:		Snell Roundhand (Bold)
 
 9.	Mini share market (allow sellers to sell parts of their business for increased equity for the business and a percent of profits sent for the buyer, allows for shared ownership of a business for sale)
 10.	option
-# BuyBuyBusiness
+## <p style="text-align: center"> Code Review
+### Ash
+Ash and I did our code review going over the implementation of devise and the inital starts of stripe. During the review I was impressed with the ease that Ash was able to implement the gem and gain a great function
+## <p style="text-align: center"> Gems
+1. dotenv-rails
+
+2. devise
+
+3. carrierwave
+
+4. fog-aws
+
+5. mini_magick
+
+6. file_validators
+
+7. figaro
+
+8. stripe
+
+9. pundit
+
+10. rails_12factor
+
+11. bootstrap
+
+12. jquery-rails
+
+13. will_paginate
