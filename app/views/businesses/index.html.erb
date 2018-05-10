@@ -1,52 +1,53 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Businesses</h1>
+<body class="yel">
+  <div class="col cust-col d-flex justify-content-around">
+      <ul>
+        <li class="toggle_bar"> <%= sortable "seller"%> </li>
+        <li class="toggle_bar"> <%= sortable "business_name", "Business name"%> </li>
+        <li class="toggle_bar"> <%= sortable "industry"%> </li>
+        <li class="toggle_bar"> <%= sortable "location"%> </li>
+        <li class="toggle_bar"> <%= sortable "inclusions"%> </li>
+      </ul>
+    </div>
+  
 
-<%= form_tag businesses_path, :method => 'get', :id => "businesses_search" do %>
-
-  <p>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search", :business_name => nil %>
-  </p>
-  <div id="businesses"><%= render 'businesses' %></div>
-<% end %>
-
-<table class="pretty">
-  <thead>
-    <tr>
-      <th><%= sortable "seller"%></th>
-      <th><%= sortable "business_name", "Business name"%></th>
-      <th><%= sortable "business_image", "Business Image"%></th>
-      <th><%= sortable "industry"%></th>
-      <th><%= sortable "location"%></th>
-      <th><%= sortable "price"%></th>
-      <th><%= sortable "size"%></th>
-      <th><%= sortable "inclusions"%></th>
-      <th><%= sortable "business_info", "Business info"%></th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+  <div class="card-deck">
     <% @businesses.each do |business| %>
-      <tr>
-        <td><%= business.seller %></td>
-        <td><%= business.business_name %></td>
-        <td><%= link_to(image_tag(business.business_image.small_thumb.url, alt: 'Image'), business.business_image.url, target: '_blank') if business.business_image? %></td>
-        <td><%= business.industry %></td>
-        <td><%= business.location %></td>
-        <td><%= business.price %></td>
-        <td><%= business.size %></td>
-        <td><%= business.inclusions %></td>
-        <td><%= truncate(business.business_info, length: 15) %></td>
-        <td><%= link_to 'Show', business %></td>
-        <td><%= link_to 'Edit', edit_business_path(business) %></td>
-        <td><%= link_to 'Destroy', business, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <div class="card">
+      <h5 class="card-title custcol font-edit"><%= business.business_name.capitalize! %></h5>
+      <div class="container">
+      <div class="col">
+      <div class="row">
+      <div class="col-5">
+      <div class="card-img-top"><%= link_to(image_tag(business.business_image.small_thumb.url, alt: 'Image'), business.business_image.url, target: '_blank') if business.business_image? %></div>
+      </div>
+      <div class="col-6 custcolor">
+      <div class="card-body">
+        <p class="card-text-cust aleg">Price</p>
+        <p class="card-text custcol">$<%= business.price %></p>
+        <p class="card-text-cust aleg">Industry</p>
+        <p class="card-text custcol"><%= business.industry.titleize %></p>
+        <p class="card-text-cust aleg">Inclusions</p>
+        <p class="card-text custcol"><%= business.inclusions.titleize %></p>
+        <p class="card-text-cust aleg">Location</p>
+        <p class="card-text custcol"><%= business.location.titleize %></p>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      <div class="card-footer">
+          <%= business.seller.capitalize! %>
+          <%= link_to 'Show', business %>
+      </div>
+        
+
+      </div>
     <% end %>
-  </tbody>
-</table>
+    </div>
+
 <%= will_paginate @business%>
 <br>
 
-<%= link_to 'New Business', new_business_path %>
+</body>

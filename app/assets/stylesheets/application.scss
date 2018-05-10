@@ -13,30 +13,83 @@
 
  */
  @import "bootstrap";
- table.pretty {
-    border-collapse: collapse;
-}
-.pretty td, .pretty th {
-    padding: 4px 10px;
-    border: solid 1px #AAA;
-}
-.pretty th .current {
-    padding-right: 12px;
-    background-repeat: no-repeat;
-    background-position: right center;
-  }
-  
-  .pretty th .asc {
-    background-image: image-url("arrow-u.png");
-    background-size: 10px 10px;
-  }
-  
-  .pretty th .desc {
-    background-image: url("arrow-d.png");
-    background-size: 10px 10px;
-    
-  }
-
   body {
       background-color: white;
   }
+
+  .custcolor{
+    background-color: #CFDBD5;
+  }
+
+  p {
+    font-family: Oswald;
+    font-size: 20px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    line-height: 20px;
+    color: #242423;
+  }
+  .aleg {
+    font-family: 'Alegreya Sans SC';font-size: 24px;
+    text-align: center;
+    }
+  h1 {
+    font-family: 'Alegreya Sans SC';font-size: 40px;
+    text-align: center;
+}
+
+.yel{
+  background-color: #F5CB5C;
+}
+
+.custcol{
+  background-color: #E8EDDF;
+  font-size: 18px;
+
+}
+.cust-col{
+  background-color: #242423;
+  text-align: center;
+}
+
+.card-img-top {
+  width: 1px;
+  height: 1px;
+  object-fit: cover;
+}
+.font-edit{
+  font-family: 'Alegreya Sans SC';font-size: 40px;
+}
+
+.nav-link a{
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.5)
+}
+ul .toggle_bar{
+  display: inline;
+  padding-left: 55px;
+  padding-right: 65px;
+  font-size: 30px;
+  font-family: 'Alegreya Sans SC'
+  // padding-left: 5%;
+}
+ul .toggle_bar1{
+  display: inline;
+  padding-left: 35px;
+  padding-right: 45px;
+  font-size: 24px;
+  font-family: 'Alegreya Sans SC'
+  // padding-left: 5%;
+}
+
+.edit_pad{
+  padding-left: 40%;
+  padding-right: 40%;
+}
+.bb{
+  background-color: #242423;
+  color: #E8EDDF;
+  padding-right: 10px;
+  padding-left: 10px;
+}

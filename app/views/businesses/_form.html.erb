@@ -1,3 +1,4 @@
+<body class="yel">
 <%= form_with(model: business, local: true) do |form| %>
   <% if business.errors.any? %>
     <div id="error_explanation">
@@ -10,53 +11,56 @@
       </ul>
     </div>
   <% end %>
-
+  <div class="col -12 edit_pad">
   <div class="field">
-    <%= form.label :seller %>
-    <%= form.text_field :seller %>
+    <p class="bb"><%= form.label :seller %></p>
+    <p><%= form.text_field :seller %></p>
+    
   </div>
 
   <div class="field">
-    <%= form.label :business_name %>
-    <%= form.text_field :business_name %>
+    <p class="bb"><%= form.label :business_name %></p>
+    <p><%= form.text_field :business_name %></p>
   </div>
 
    <div class="field">
-    <%= form.label :business_image %>
-    <%= form.file_field :business_image %>
+    <p class="bb"><%= form.label :business_image %></p>
+    <p><%= form.file_field :business_image %></p>
   </div>
 
   <div class="field">
-    <%= form.label :industry %>
-    <%= form.text_field :industry %>
+    <p class="bb"><%= form.label :industry %></p>
+    <p><%= form.text_field :industry %></p>
   </div>
 
   <div class="field">
-    <%= form.label :location %>
-    <%= form.text_field :location %>
+    <p class="bb"><%= form.label :location %></p>
+    <p><%= form.text_field :location %></p>
   </div>
 
   <div class="field">
-    <%= form.label :price %>
-    <%= form.number_field :price %>
+    <p class="bb"><%= form.label :price %></p>
+    <p><%= form.number_field :price %></p>
   </div>
 
   <div class="field">
-    <%= form.label :size %>
-    <%= form.text_field :size %>
+    <p class="bb"><%= form.label :size %></p>
+    <p><%= form.text_field :size %></p>
   </div>
 
   <div class="field">
-    <%= form.label :inclusions %>
-    <%= form.text_field :inclusions %>
+    <p class="bb"><%= form.label :inclusions %></p>
+    <p><%= form.text_field :inclusions %></p>
   </div>
 
   <div class="field">
-    <%= form.label :business_info %>
-    <%= form.text_field :business_info %>
+    <p class="bb"><%= form.label :business_info %></p>
+    <p><%= form.text_field :business_info %></p>
   </div>
 
   <div class="actions">
     <%= form.submit %>
   </div>
+  </div>
 <% end %>
+</body>
