@@ -4,7 +4,7 @@
   # GET /businesses.json
   helper_method :sort_column, :sort_direction
   def index
-    @businesses = Business.order(sort_column + " " +  sort_direction)
+    @businesses = Business.search(params[:search]).order(sort_column + " " +  sort_direction).paginate(:per_page => 5, :page => params[:page])
     authorize @businesses
   end
  
